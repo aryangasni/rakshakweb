@@ -143,25 +143,3 @@ code {
   width: 33px;
 }
 
-/** footer **/
-.footer-panel1{
-  height: 250px;
-  background-color: #efefef;
-  display: flex;
-  justify-content: space-evenly
-}
-.footer-components{
-  height: 250px;
-  width: 30%;
-  background-color: white;
-  justify-content: center;
-}
-.footer-panel3{
-  height: 60px;
-  background-color: #efefef;
-}
-.copywrite{
-  text-align: center;
-  align-items: center;
-  padding: 20px
-}

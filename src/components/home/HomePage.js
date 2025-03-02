@@ -5,6 +5,7 @@ import Stats from './Stats';
 import LabVisit from '../LabVisit';
 // import Navbar from '../Navbar';
 // import Footer from '../Footer';
+import ThemeSwitcher from "../ThemeSwitcher";
 
 function HomePage() {
     return ( 
@@ -13,6 +14,7 @@ function HomePage() {
           <LabVisit />
           <PlaneSlide />
           <Stats />
+          <ThemeSwitcher />
         </>
      );
 }
