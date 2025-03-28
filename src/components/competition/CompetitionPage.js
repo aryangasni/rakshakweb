@@ -1,8 +1,11 @@
 import React from 'react';
+import Acc from './Acc';
 
 function CompetitionPage() {
     return ( 
-        <h1>CompetitionPage</h1>
+        <>
+          <Acc />
+        </>
      );
 }
 
