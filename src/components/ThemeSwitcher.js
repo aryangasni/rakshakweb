@@ -14,25 +14,43 @@ function ThemeSwitcher() {
     };
 
     const setTheme = (theme) => {
-      document.documentElement.setAttribute(
-        "data-bs-theme",
+      const resolvedTheme =
         theme === "auto"
           ? window.matchMedia("(prefers-color-scheme: dark)").matches
             ? "dark"
             : "light"
-          : theme
-      );
+          : theme;
+
+      document.documentElement.setAttribute("data-bs-theme", resolvedTheme);
+
+      // Update button states
+      document.querySelectorAll("[data-bs-theme-value]").forEach((button) => {
+        const isActive = button.getAttribute("data-bs-theme-value") === theme;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", isActive);
+      });
     };
 
-    setTheme(getPreferredTheme());
+    // Initialize theme
+    const preferredTheme = getPreferredTheme();
+    setTheme(preferredTheme);
 
-    document.querySelectorAll("[data-bs-theme-value]").forEach((button) => {
+    // Add event listeners to buttons
+    const buttons = document.querySelectorAll("[data-bs-theme-value]");
+    buttons.forEach((button) => {
       button.addEventListener("click", () => {
         const theme = button.getAttribute("data-bs-theme-value");
         setStoredTheme(theme);
         setTheme(theme);
       });
     });
+
+    // Cleanup event listeners on unmount
+    return () => {
+      buttons.forEach((button) => {
+        button.removeEventListener("click", () => {});
+      });
+    };
   }, []);
 
   return (
@@ -52,13 +70,16 @@ function ThemeSwitcher() {
           Toggle theme
         </span>
       </button>
-      <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <ul
+        className="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
         <li>
           <button
             type="button"
-            className="dropdown-item d-flex align-items-center active"
+            className="dropdown-item d-flex align-items-center"
             data-bs-theme-value="light"
-            aria-pressed="true"
+            aria-pressed="false"
           >
             <svg className="bi me-2 opacity-50" width="1em" height="1em">
               <use href="#sun-fill"></use>

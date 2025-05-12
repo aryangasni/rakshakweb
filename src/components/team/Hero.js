@@ -11,10 +11,10 @@ function Hero() {
   </div>
  <div class="carousel-inner">
     <div class="carousel-item active">
-    <img src="images/Pg4.jpg" class="d-block w-100" alt="competition"  width="50%" height="600vh"/>
+    <img src="images/team_24-25.jpg" class="d-block w-100" alt="competition"  width="50%" height="600vh"/>
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Rakshak 24-25: Masters of the Skies</h5>
+        <p>Engineering the future, one UAV at a time. Meet the team pushing the boundaries of autonomous aviation at IIT Bombay!</p>
       </div>
     </div>
     <div class="carousel-item">

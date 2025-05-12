@@ -7,11 +7,11 @@ function PlaneSlide() {
             <p class="pdest">"Guardians of the skies, engineers of peace - every bolt, every flight secures our nation's might."</p>
             <div class="imgdest">
                 <div class="imgboxdest">
-                    <div class="imgprop"><img class="dest-image" src="/images/saeplane-800x533.jpg" alt="plane" /></div>
+                    <div class="imgprop"><img class="dest-image" src="/images/sae-plane.jpg" alt="plane" /></div>
                     <p class="citydest">SAE PLANE</p>
                 </div>
                 <div class="imgboxdest">
-                    <div class="imgprop"><img class="dest-image" src="/images/sandy-800x533.jpg" alt="plane" /></div>
+                    <div class="imgprop"><img class="dest-image" src="/images/sandy.jpg" alt="plane" /></div>
                     <p class="citydest">SANDY</p>
                 </div>
                 <div class="imgboxdest">
